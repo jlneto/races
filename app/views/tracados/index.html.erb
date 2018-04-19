@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Tracados</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Pista</th>
+      <th>Imagem</th>
+      <th>Melhor tempo</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tracados.each do |tracado| %>
+      <tr>
+        <td><%= tracado.nome %></td>
+        <td><%= tracado.pista %></td>
+        <td><%= tracado.imagem %></td>
+        <td><%= tracado.melhor_tempo %></td>
+        <td><%= link_to 'Show', tracado %></td>
+        <td><%= link_to 'Edit', edit_tracado_path(tracado) %></td>
+        <td><%= link_to 'Destroy', tracado, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tracado', new_tracado_path %>

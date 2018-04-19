@@ -1,24 +1,6 @@
-# README
+rails g scaffold Tracado nome pista imagem melhor_tempo:decimal
+rails g scaffold Prova nome dia:date horario resultado:texta tracado:belongs_to
+rails g scaffold Piloto nome cpf nascimento:date apelido email celular
+rails g model HistoricoPiloto piloto:belongs_to prova:belongs_to resultado:json
+rails g controller home index 
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

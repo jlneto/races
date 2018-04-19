@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @prova.nome %>
+</p>
+
+<p>
+  <strong>Dia:</strong>
+  <%= @prova.dia %>
+</p>
+
+<p>
+  <strong>Horario:</strong>
+  <%= @prova.horario %>
+</p>
+
+<p>
+  <strong>Resultado:</strong>
+  <%= @prova.resultado %>
+</p>
+
+<p>
+  <strong>Tracado:</strong>
+  <%= @prova.tracado %>
+</p>
+
+<%= link_to 'Edit', edit_prova_path(@prova) %> |
+<%= link_to 'Back', provas_path %>

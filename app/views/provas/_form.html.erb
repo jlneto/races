@@ -1,0 +1,42 @@
+<%= form_with(model: prova, local: true) do |form| %>
+  <% if prova.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(prova.errors.count, "error") %> prohibited this prova from being saved:</h2>
+
+      <ul>
+      <% prova.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dia %>
+    <%= form.date_select :dia %>
+  </div>
+
+  <div class="field">
+    <%= form.label :horario %>
+    <%= form.text_field :horario %>
+  </div>
+
+  <div class="field">
+    <%= form.label :resultado %>
+    <%= form.text_field :resultado %>
+  </div>
+
+  <div class="field">
+    <%= form.label :tracado_id %>
+    <%= form.text_field :tracado_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

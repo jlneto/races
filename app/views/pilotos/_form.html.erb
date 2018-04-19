@@ -1,0 +1,47 @@
+<%= form_with(model: piloto, local: true) do |form| %>
+  <% if piloto.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(piloto.errors.count, "error") %> prohibited this piloto from being saved:</h2>
+
+      <ul>
+      <% piloto.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nome %>
+    <%= form.text_field :nome %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cpf %>
+    <%= form.text_field :cpf %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nascimento %>
+    <%= form.date_select :nascimento %>
+  </div>
+
+  <div class="field">
+    <%= form.label :apelido %>
+    <%= form.text_field :apelido %>
+  </div>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :celular %>
+    <%= form.text_field :celular %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

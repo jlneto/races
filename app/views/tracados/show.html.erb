@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nome:</strong>
+  <%= @tracado.nome %>
+</p>
+
+<p>
+  <strong>Pista:</strong>
+  <%= @tracado.pista %>
+</p>
+
+<p>
+  <strong>Imagem:</strong>
+  <%= @tracado.imagem %>
+</p>
+
+<p>
+  <strong>Melhor tempo:</strong>
+  <%= @tracado.melhor_tempo %>
+</p>
+
+<%= link_to 'Edit', edit_tracado_path(@tracado) %> |
+<%= link_to 'Back', tracados_path %>

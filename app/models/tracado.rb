@@ -1,0 +1,2 @@
+class Tracado < ApplicationRecord
+end

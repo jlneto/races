@@ -1,0 +1,2 @@
+module TracadosHelper
+end

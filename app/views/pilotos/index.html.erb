@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pilotos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Cpf</th>
+      <th>Nascimento</th>
+      <th>Apelido</th>
+      <th>Email</th>
+      <th>Celular</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pilotos.each do |piloto| %>
+      <tr>
+        <td><%= piloto.nome %></td>
+        <td><%= piloto.cpf %></td>
+        <td><%= piloto.nascimento %></td>
+        <td><%= piloto.apelido %></td>
+        <td><%= piloto.email %></td>
+        <td><%= piloto.celular %></td>
+        <td><%= link_to 'Show', piloto %></td>
+        <td><%= link_to 'Edit', edit_piloto_path(piloto) %></td>
+        <td><%= link_to 'Destroy', piloto, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Piloto', new_piloto_path %>

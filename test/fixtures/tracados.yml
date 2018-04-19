@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  nome: MyString
+  pista: MyString
+  imagem: MyString
+  melhor_tempo: 9.99
+
+two:
+  nome: MyString
+  pista: MyString
+  imagem: MyString
+  melhor_tempo: 9.99
